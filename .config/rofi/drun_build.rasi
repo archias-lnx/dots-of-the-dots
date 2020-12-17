@@ -1,0 +1,113 @@
+// build_conf: p:"<>" c:"//"
+// set from outside to not be fixed on i3
+// set $screen_width $<wmutil -d | cut -d'x' -f1>
+// set $screen_height $<wmutil -d | cut -d'x' -f2>
+
+//!set $mainbox_pad_horizontal_min 100
+//!set $mainbox_pad_vertical_min 10
+
+//!set $element_spacing 20
+//!set $element_width 250
+//!set $hspace $$<$screen_width - $mainbox_pad_horizontal_min * 2>
+//!set $nr_columns $$<($hspace + $element_spacing) / ($element_width + $element_spacing)>
+
+//!set $outer_hspace $$<$screen_width - $element_width * $nr_columns - $element_spacing * ($nr_columns - 1)>
+//!set $mainbox_pad_horizontal $$<$outer_hspace / 2>
+//!set $mainbox_pad_vertical 10
+
+//!set $min_width_input $$<2 * $element_width>
+//!set $margin_input $$<($screen_width - $min_width_input - 2 * $mainbox_pad_horizontal) / 2>
+
+configuration {
+  show-icons:                     true;
+  icon-theme:                     "korla";
+  font:                           "Neue Haas Unica Pro Bold 13";
+  drun-display-format:            "{name}";
+}
+
+// stays the same
+* {
+  background-color:               transparent;
+  background:                     #000000aa;
+  background-alt:                 #f2f2f233;
+  text-color:                     #D8DEE9;
+  selected-background:            #e2e2e277;
+  selected-text-color:            #ffffff;
+  primary:                        #A3BE8C;
+  urgent:                         #BF616A;
+}
+
+window {
+  transparency:                   "real";
+  background-color:               @background;
+  height:                         100%;
+  width:                          100%;
+  location:                       northwest;
+  anchor:                         northwest;
+}
+
+mainbox {
+  children: [ inputbar, listview ];
+  padding: $$<$mainbox_pad_vertical> $$<$mainbox_pad_horizontal> $$<$mainbox_pad_vertical + 100> $$<$mainbox_pad_horizontal>;
+}
+
+prompt {
+  enabled: false;
+}
+
+inputbar {
+  expand:                         false;
+  background-color:               @background-alt;
+  border-radius:                  6;
+  margin:                         40px $$<$margin_input> 20px $$<$margin_input>;
+  padding:                        10px 10px 10px 10px;
+  position:                       north;
+}
+
+listview {
+  columns: $$<$nr_columns>;
+  spacing: 20;
+  dynamic: false;
+}
+
+element {
+  background-color: @background-alt;
+  border-radius: 20;
+  orientation: vertical;
+  padding: 30 0 30 0;
+}
+
+element normal.urgent, element alternate.urgent {
+    background-color:               @urgent;
+}
+
+element normal.active, element alternate.active {
+    background-color:               @selected-background;
+    color:                          @selected-text-color;
+}
+
+element selected {
+    background-color:               @selected-background;
+    color:                          @selected-text-color;
+    border-radius:                  30;
+}
+
+element selected.urgent {
+    background-color:               @urgent;
+}
+
+element selected.active {
+    background-color:               @selected-background;
+    color:                          @selected-text-color;
+}
+
+element-icon {
+    size:                           48;
+    border:                         0px;
+}
+
+element-text {
+    expand:                         true;
+    horizontal-align:               0.5;
+    margin:                         10px 15px 0px 15px;
+}

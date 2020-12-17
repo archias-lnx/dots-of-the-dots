@@ -1,0 +1,12 @@
+{
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "window.zoomLevel": 0,
+    "workbench.iconTheme": "material-icon-theme",
+    "python.languageServer": "Microsoft",
+    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "workbench.colorTheme": "Atom One Dark",
+    //  Vim Bindings
+    "vim.useSystemClipboard": true,
+    "editor.lineNumbers": "relative",
+}
