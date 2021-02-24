@@ -5,7 +5,7 @@
 * firefox: modified version of firefox with blur you can find at modify from [here][firefox-blurred].
 * thunderbird riced according to thunderblurred you can find at modify from [here][thunderbird-blurred].
 
-* awesome wm config can be found in this repo: Will be uploaded soon
+* awesome wm config can be found [here][awesomewm-config]
 
 Package dependencies (by package-name in the AUR):
 rofi-git kitty ranger neofetch vim/neovim zsh oh-my-zsh zsh-histroy-substring-search powerlevel10k zsh-syntax-highlighting i3lock evince zathura vscodium okular firefox thunderbird qt5-styleplugins gnome-keyring
@@ -18,3 +18,4 @@ Git installs:
 [thunderbird-blurred]: https://github.com/manilarome/thunderblurred
 [powerlevel10k]: https://github.com/romkatv/powerlevel10k
 [vim-plug]: https://github.com/junegunn/vim-plug
+[awesomewm-config]:https://github.com/archias-lnx/awesome-possum
