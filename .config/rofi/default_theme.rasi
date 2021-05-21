@@ -1,0 +1,180 @@
+/*-*- mode: css; -*-*/
+configuration {
+    display-drun:                   "Apps";
+    display-window:                 "Window";
+    show-icons:true;
+}
+ 
+* {
+    lines: 16;
+    columns: 1;
+    background-color: #00000066;
+    border-color: #00000000;
+    text-color: #EFEFEF;
+    font: "SF Pro Text 12";
+}
+ 
+#window {
+    border: 0;
+    border-radius: 4px;
+    padding: 40;
+    width: 40%;
+    height: 50%;
+}
+ 
+#mainbox {
+    background-color: #00000000;
+    children: [inputbar, listview];
+    spacing: 10px;
+    /*margin: 20%;*/
+    padding: 30px 0;
+    border: 1px;
+    border-color: @base0D;
+}
+ 
+ 
+#listview {
+    background-color: #00000000;
+    fixed-height: 0;
+    border: 0px;
+    spacing: 5px;
+    scrollbar: false;
+    padding: 10px 10px 0px;
+}
+ 
+#element {
+    background-color: #00000000;
+    border: 0;
+    border-radius: 15px;
+    padding: 3 0  3 4 ;
+}
+ 
+#element selected {
+    background-color: #00a0e6;
+    text-color: #EFEFEF;
+}
+ 
+ 
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    background-color: #00000000;
+}
+ 
+#case-indicator {
+    background-color: #00000000;
+    spacing:    0;
+}
+#entry {
+    background-color: #00000000;
+    spacing:    0;
+}
+#prompt {
+    background-color: #00000000;
+    spacing:    0;
+}
+ 
+#textbox-prompt-colon {
+    background-color: #00000000;
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+}
+/* vim:ft=css 
+
+/** {*/
+/*  background-color:               transparent;*/
+/*  background:                     #000000aa;*/
+/*  background-alt:                 #f2f2f233;*/
+/*  text-color:                     #D8DEE9;*/
+/*  selected-background:            #f2f2f277;*/
+/*  selected-text-color:            #ffffff;*/
+/*  primary:                        #A3BE8C;*/
+/*  urgent:                         #BF616A;*/
+/*}*/
+
+/*window {*/
+/*  transparency:                   "real";*/
+/*  background-color:               @background;*/
+/*  height:                         100%;*/
+/*  width:                          100%;*/
+/*  location:                       northwest;*/
+/*  anchor:                         northwest;*/
+/*}*/
+
+/*prompt {*/
+/*  enabled: false;*/
+/*}*/
+
+
+/*inputbar {*/
+/*  expand:                         false;*/
+/*  background-color:               @background-alt;*/
+/*  border-radius:                  6;*/
+/*  margin:                         40px 360px 20px 360px;*/
+/*  padding:                        10px 10px 10px 10px;*/
+/*  position:                       north;*/
+/*  width:                          1px;*/
+/*}*/
+
+/*entry {*/
+/*  /*expand:                         false;*/
+/*  width:                          20em;*/
+/*  margin:                         40px -275px 20px 355px;*/
+/*  border-radius:                  6;*/
+/*  padding:                        10px 10px 10px 10px;*/
+/*  background-color:               #00000020;*/
+/*  border:                         0px 0px solid 0px 0px;*/
+/*  border-color:                   @text-color;*/
+/*  font:                           "SFNS Display 18";*/*/
+/*}*/
+
+
+/*listview {*/
+/*  columns: 1;*/
+/*  /* rows: 2; */*/
+/*  spacing: 4;*/
+/*  dynamic: false;*/
+/*}*/
+
+/*element {*/
+/*  background-color: @background-alt;*/
+/*  border-radius: 4;*/
+/*  orientation: vertical;*/
+/*  padding: 0 0 5 0;*/
+/*}*/
+
+
+/*mainbox {*/
+/*  children: [ inputbar, listview ];*/
+/*  padding: 10px 160px 10px 160px;*/
+/*}*/
+
+/*element normal.urgent, element alternate.urgent {*/
+/*    background-color:               @urgent;*/
+/*}*/
+
+/*element normal.active, element alternate.active {*/
+/*    background-color:               @selected-background;*/
+/*    color:                          @selected-text-color;*/
+/*}*/
+
+/*element selected {*/
+/*    background-color:               @selected-background;*/
+/*    color:                          @selected-text-color;*/
+/*    border-radius:                  6;*/
+/*}*/
+
+/*element selected.urgent {*/
+/*    background-color:               @urgent;*/
+/*}*/
+
+/*element selected.active {*/
+/*    background-color:               @selected-background;*/
+/*    color:                          @selected-text-color;*/
+/*}*/
+
+/*element-text {*/
+/*    expand:                         true;*/
+/*    horizontal-align:               0.5;*/
+/*    margin:                         10px 15px 0px 15px;*/
+/*}*/

@@ -1,0 +1,29 @@
+/*-*- mode: css; -*-*/
+configuration {
+    modi: "window,drun,ssh";
+
+    show-icons: true;
+    icon-theme: "Breeze";
+    theme: "default_theme";
+    cycle: true;
+    hide-scrollbar: true;
+    disable-history: false;
+    display-drun: "apps";
+    columns: 1;
+
+    kb-move-word-back: "Alt+b";
+    kb-move-word-forward: "Alt+f";
+
+	  kb-remove-char-back: "BackSpace,Shift+BackSpace";
+	  kb-remove-to-eol: "";
+	  kb-accept-entry: "Control+m,Return,KP_Enter";
+
+	  kb-mode-next: "Shift+Right,Control+Tab,Control+L";
+	  kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab,Control+H";
+
+    kb-row-left: "Control+Left,Control+h";
+    kb-row-right: "Control+Right,Control+l";
+
+	  kb-row-up: "Up,Control+p,ISO_Left_Tab,Control+k";
+	  kb-row-down: "Down,Control+n,Control+j";
+}

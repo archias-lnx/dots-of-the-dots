@@ -1,0 +1,18 @@
+
+
+choices="Laptop\nT440p\nOffice\nHome\nDesktop\nHDMI\nManual selection"
+
+chosen=$(echo -e "$choices" | rofi -dmenu )
+
+case "$chosen" in
+	Laptop) xrandr --output eDP1 --auto --output DP2-2 --off --output DP2-3 --off ;;
+	T440p) xrandr --output eDP1 --auto --output DP2-2 --off --output DP2-1 --off ;;
+	Office) xrandr --output eDP1 --off ; xrandr --output DP2-3 --mode 1920x1200 ; xrandr --output DP2-2 --mode 1920x1080 && xrandr --output DP2-2 --mode 1920x1200 && xrandr --output DP2-2 --right-of DP2-3 ;;
+	Home) xrandr --output eDP1 --off --output DP2-2 --mode 1920x1080 --rate 119.98 --output DP2-1 --mode 1920x1080 --rate 144 --right-of DP2-2 ;;
+	Desktop) xrandr --output DP-4 --mode 1920x1080 --rate 144 --output DP-3 --mode 1920x1080 --rate 144 --right-of DP-4 ;;
+	HDMI) xrandr --output eDP-1 --auto --output HDMI-1 --auto --same-as eDP-1 ;;
+	"Manual selection") xrandr ;;
+esac
+
+keyboardInit
+awesome-client "_G.awesome.restart()"
